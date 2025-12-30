@@ -1,0 +1,30 @@
+ini baca aja 
+https://chatgpt.com/c/69523bbc-1cec-8324-bd09-e7fdc4564cbb
+
+
+nah jadi ini tuh keren banget
+
+karena ktia bisa nyatuin folder yang isinya itu adalh routingnya dan juga komponenyaja
+jadi misal di folder profile, nah pertama ita buat dulu ya file page / atau
+kalo pke layout kita bisa buat file layoutnya juga
+nah nanti di file itu kalo kita buat misal ButtonComponent.tsx di folder profile
+maka itu tidak akna dibuatkan routingnya tapi hanya tsx biasa aja yang bisa di import
+
+
+
+1. layout.tsx       → selalu
+2. template.tsx     → jika ada
+3. loading.tsx      → jika menunggu
+4. page.tsx         → normal
+5. not-found.tsx    → jika 404
+6. error.tsx        → jika crash
+
+KALIMAT KUNCI (WAJIB DIINGAT)
+
+Layout selalu membungkus segalanya
+Page adalah isi
+Loading, error, not-found menggantikan page
+
+coba baca ini di 
+https://chatgpt.com/c/69523bbc-1cec-8324-bd09-e7fdc4564cbb
+di pertanyaan yang terakhir saja
