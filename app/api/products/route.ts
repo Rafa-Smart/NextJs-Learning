@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-import { products } from "./_data";
+import { products } from "./_products";
 
 // jadi gini, kita wajib pake request:NextRequest ya
 // WAJIB PAE REQUEST KARENA INI ADLAH KONTARK

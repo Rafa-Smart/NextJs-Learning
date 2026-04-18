@@ -6,7 +6,7 @@
 
 import { NextRequest, NextResponse } from "next/server";
 
-import { products } from "../_data";
+import { products } from "../_products";
 
 // ingat ya product type itu udha ada di global.d.ts
 
@@ -63,11 +63,11 @@ export const DELETE = async (request: NextRequest, parameter: TypeParam) => {
 
 export const GET = async (request: NextRequest, parameter: TypeParam) => {
   const { id } = await parameter.params;
-  
+
   const index = products.findIndex((product: Product) => {
     return id === product.id;
   });
-  console.log(index)
+  console.log(index);
   if (index === -1) {
     return NextResponse.json({ message: "Not found" }, { status: 404 });
   }
