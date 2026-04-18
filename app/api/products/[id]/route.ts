@@ -63,10 +63,11 @@ export const DELETE = async (request: NextRequest, parameter: TypeParam) => {
 
 export const GET = async (request: NextRequest, parameter: TypeParam) => {
   const { id } = await parameter.params;
-  console.log(request);
+  
   const index = products.findIndex((product: Product) => {
     return id === product.id;
   });
+  console.log(index)
   if (index === -1) {
     return NextResponse.json({ message: "Not found" }, { status: 404 });
   }
