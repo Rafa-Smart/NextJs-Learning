@@ -1,4 +1,6 @@
+"use client"
 import Link, { LinkProps } from "next/link";
+import { useState } from "react";
 
 // nah disni kita perlu type untuk childrennya ya jadi gini aja
 // kita buat type global di routes.d.ts disitu sudah dikasih
@@ -110,11 +112,16 @@ import Link, { LinkProps } from "next/link";
 // jadi untuk seluruh route yang aktif di bawah /about ini
 
 // seperti profile
-export default function AboutLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+
+// nah gini saya gunkan
+// type LayoutProps<'/about'>
+
+// karena layout ini tuh ada di dalam folder /about
+// dan juga mengindikasikan bahwa nanti propsnya itu akan berupa seluruh komponen turunan dari si
+// /about ini, jadi bisa page dari about, atau childrennya itu bisa layout dari about juga
+// misal /about/profile/
+export default function AboutLayout({ children }: LayoutProps<"/about">) {
+  const [counter, setCounter] = useState(0);
   return (
     <>
       <nav className="fixed right-0 top-10 z-10 h-screen w-60 bg-gray-800">
@@ -130,6 +137,8 @@ export default function AboutLayout({
           </Link>
         </ul>
       </nav>
+      <br />
+      <button onClick={() => setCounter(counter + 1)}>layout {counter}</button>
       <div>{children}</div>
     </>
   );

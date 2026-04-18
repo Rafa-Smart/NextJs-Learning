@@ -1,2 +1,14 @@
 ini baca aja
 wajib 
+https://chatgpt.com/c/695251ed-3748-8320-883b-8e118b06ce16
+
+
+1. searchParams: { [key: string]: string | string[] | undefined } itu di tyscript bagaimana ? apakah berati search params ini harus punya atribut kemudian itu adalah array yang keynya string lalu valuenya itu bisa string, atau array of string atau undefined ? 
+2. jelaskan kepada saya perbedaan ayng snagat amat jelas mengenai template dan juga layout berikan contohnya kelebihan dan kekurangann dan kapan saya menggunaknya
+
+jawabnnya ada di sini
+https://chatgpt.com/c/695251ed-3748-8320-883b-8e118b06ce16
+di bagian akhir
+
+
+ini untuk perbedaan layouting dengan template
