@@ -8,7 +8,7 @@ export const POST = async (request: NextRequest) => {
     if (!data.email || !data.password || !data.fullname) {
       return NextResponse.json(
         { message: "Semua field wajib diisi" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -16,7 +16,7 @@ export const POST = async (request: NextRequest) => {
     if (isExist) {
       return NextResponse.json(
         { message: "Email sudah digunakan" },
-        { status: 409 }
+        { status: 409 },
       );
     }
 
@@ -27,12 +27,22 @@ export const POST = async (request: NextRequest) => {
         message: "Berhasil register",
         user: data,
       },
-      { status: 201 }
+      { status: 201 },
     );
   } catch (error) {
     return NextResponse.json(
       { message: "Internal server error" },
-      { status: 500 }
+      { status: 500 },
     );
   }
+};
+
+export const GET = async (request: NextRequest) => {
+  return NextResponse.json(
+    {
+      message: "berhasil ambil semua data users",
+      users: users,
+    },
+    { status: 200 },
+  );
 };

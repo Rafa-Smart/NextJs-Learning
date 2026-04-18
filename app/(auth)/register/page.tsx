@@ -1,8 +1,7 @@
-import { headers } from "next/headers";
+"use client"; 
 import Link from "next/link";
 import { useState } from "react";
 import Swal from "sweetalert2";
-("use-client");
 export default function RegisterPage() {
   const [loading, setLoading] = useState(false);
   const [dataForm, setDataForm] = useState({
@@ -74,7 +73,6 @@ export default function RegisterPage() {
       <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm border-2 rounded-2xl p-4">
         <form
           onSubmit={handleSubmit}
-          action="#"
           method="POST"
           className="space-y-6"
         >
@@ -106,7 +104,7 @@ export default function RegisterPage() {
               <input
                 id="email"
                 name="email"
-                type="email"
+                type="text"
                 required
                 autoComplete="email"
                 onChange={(e) => handleChange(e)}
@@ -150,7 +148,7 @@ export default function RegisterPage() {
               type="submit"
               className="flex w-full justify-center rounded-md bg-indigo-500 px-3 py-1.5 text-sm/6 font-semibold text-white hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
             >
-              Sign up
+              {loading ? 'Kirim' : 'Sign Up'}
             </button>
           </div>
         </form>
